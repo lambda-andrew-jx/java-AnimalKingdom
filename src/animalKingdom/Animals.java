@@ -9,4 +9,14 @@ public abstract class Animals
     public abstract String move();
     public abstract String breath();
     public abstract String reproduce();
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public int getYear()
+    {
+        return year;
+    }
 }

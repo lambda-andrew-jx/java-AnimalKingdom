@@ -31,7 +31,7 @@ public class Fish extends Animals
     @Override
     public String toString()
     {
-        return "Fish{" + "id: " + id + " " + name + " was named in the year "+ year + "}";
+        return "Fish " + "id: " + id + " " + name + " was named in the year "+ year + " ";
     }
 
 }

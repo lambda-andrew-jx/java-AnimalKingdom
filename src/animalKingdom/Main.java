@@ -1,6 +1,7 @@
 package animalKingdom;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main
 {
@@ -52,6 +53,26 @@ public class Main
          animalsList.addAll(fishList);
 
          System.out.println(animalsList);
+
+         System.out.println("*** Descending by year ***");
+
+          animalsList.sort((a1, a2) -> a1.getYear() - a2.getYear());
+          animalsList.forEach((a) -> System.out.println(a.getYear()));
+
+        System.out.println("*** Alphabetically ***");
+         animalsList.sort((a1, a2) -> a1.getName().compareTo(a2.getName()));
+         animalsList.forEach((a) -> System.out.println(a.getName()));
+
+         System.out.println("*** Movement ***");
+         animalsList.sort((a1, a2) -> a1.move().compareTo(a2.move()));
+         animalsList.forEach((a) -> System.out.println(a.move()));
+
+         System.out.println("*** Breath with lungs ***");
+
+         
+         animalsList.sort((a1, a2) -> a1.breath().compareTo(a2.breath()));
+         animalsList.forEach((a) -> System.out.println(a.breath()));
+
 
 
 
