@@ -73,6 +73,13 @@ public class Main {
 
         System.out.println("\n*** With Lungs and Lays Eggs ***");
         printAnimals(animalList, a -> (a.getBreath() == "lungs") && (a.getReproduction() == "eggs"));
+        
+        System.out.println("\n*** Named in 1758 ***");
+        printAnimals(animalList, a -> (a.getDiscovered() == 1758));
+
+        System.out.println("\n*** Mammals Listed Alphabetically ***");
+        animalList.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
+        printAnimals(animalList, a -> (a instanceof Mammal));
     }
 
     
