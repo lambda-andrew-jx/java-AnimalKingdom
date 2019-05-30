@@ -1,8 +1,12 @@
 package animalKingdom;
 
-public interface Animals
+public abstract class Animals
 {
-    void move();
-    void breath();
-    void reproduce();
+    public int id;
+    public String name;
+    public int year;
+
+    public abstract String move();
+    public abstract String breath();
+    public abstract String reproduce();
 }

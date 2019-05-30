@@ -1,10 +1,10 @@
 package animalKingdom;
 
-public class Mammals extends Animals
+public class Fish extends Animals
 {
     private static int maxId = 0;
 
-    public Mammals( String name, int year)
+    public Fish( String name, int year)
     {
         maxId++;
         id = maxId;
@@ -15,23 +15,23 @@ public class Mammals extends Animals
 
     public String move()
     {
-        return "walks"; 
+        return "Swim"; 
     }
 
     public String breath()
     {
-        return "Lungs";
+        return "gills";
     }
 
     public String reproduce()
     {
-        return "live birth";
+        return "eggs";
     }
 
     @Override
     public String toString()
     {
-        return "Mammals{" + "id: " + id + " " + name + " was named in the year "+ year + "}";
+        return "Fish{" + "id: " + id + " " + name + " was named in the year "+ year + "}";
     }
 
 }
