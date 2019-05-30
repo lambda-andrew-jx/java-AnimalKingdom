@@ -5,7 +5,7 @@ public class Birds extends AbstractAnimals  {
         super(hunger, name, year);
 
     }
-
+    
     @Override
     public String move(String moveMethod) {
         return "flies with " + moveMethod;
