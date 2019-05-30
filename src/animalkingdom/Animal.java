@@ -10,4 +10,8 @@ public abstract class Animal
     public abstract String breath();
     public abstract String reproduce();
     
+    public int getYear()
+    {
+        return yearDiscovered;
+    }
 }

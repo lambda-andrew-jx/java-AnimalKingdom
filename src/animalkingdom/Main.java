@@ -60,9 +60,17 @@ public class Main
         animalArrayList.addAll(mammalArrayList);
         animalArrayList.addAll(birdArrayList);
         animalArrayList.addAll(fishArrayList);
+        System.out.println("*** ANIMAL LIST ***");
         System.out.println(animalArrayList.toString());
         System.out.println();
         //sorting and filtering
-       
+        System.out.println("*** FILTERING BY YEAR 1800 OR LATER***");
+        printAnimals(animalArrayList, ani -> ani.getYear()>=1800);
+        System.out.println();
+
+        System.out.println("*** LIST ANIMALS IN DESCENDING ORDER BY YEAR NAMED ***");
+        System.out.println();
+        animalArrayList.sort((a1, a2) -> a1.getYear() - a2.getYear());
+        animalArrayList.forEach((ani) -> System.out.println(ani));
     }
 }
