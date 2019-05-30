@@ -28,7 +28,7 @@ public class Bird extends Animal
         return("eggs");
     }
     @Override
-    public String tosString()
+    public String toString()
     {
         return "Bird{" + "id:'" + id +'\'' + ", name:" + name + ", year named:" + yearDiscovered + "}";
     }

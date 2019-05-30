@@ -6,8 +6,8 @@ public abstract class Animal
     public String name;
     public int yearDiscovered;
 
-    public abstract move();
-    public abstract breath();
-    public abstract reproduce();
+    public abstract String move();
+    public abstract String breath();
+    public abstract String reproduce();
     
 }

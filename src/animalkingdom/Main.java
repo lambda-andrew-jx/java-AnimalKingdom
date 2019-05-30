@@ -4,6 +4,16 @@ import java.util.ArrayList;
 
 public class Main
 {
+    public static void printAnimals(ArrayList<Animal> animal, CheckAnimal tester)
+    {
+        for (Animal ani : animal)
+        {
+            if(tester.test(ani))
+            {
+                System.out.println(ani.toString());
+            }
+        }
+    }
     public static void main(String[] args)
     {
         Mammal panda = new Mammal("Panda", 1869);
@@ -24,6 +34,7 @@ public class Main
         Fish catfish = new Fish("Catfish", 1817);
         Fish perch = new Fish("Perch", 1758);
 
+        
         ArrayList<Mammal> mammalArrayList = new ArrayList<Mammal>();
         mammalArrayList.add(panda);
         mammalArrayList.add(zebra);
@@ -32,17 +43,26 @@ public class Main
         mammalArrayList.add(armadillo);
         mammalArrayList.add(raccoon);
         mammalArrayList.add(bigfoot);
-
+        
         ArrayList<Bird> birdArrayList = new ArrayList<Bird>();
         birdArrayList.add(pigeon);
         birdArrayList.add(peacock);
         birdArrayList.add(toucan);
         birdArrayList.add(parrot);
         birdArrayList.add(swan);
-
+        
         ArrayList<Fish> fishArrayList = new ArrayList<Fish>();
         fishArrayList.add(salmon);
         fishArrayList.add(catfish);
         fishArrayList.add(perch);
+        
+        ArrayList<Animal> animalArrayList = new ArrayList<Animal>();
+        animalArrayList.addAll(mammalArrayList);
+        animalArrayList.addAll(birdArrayList);
+        animalArrayList.addAll(fishArrayList);
+        System.out.println(animalArrayList.toString());
+        System.out.println();
+        //sorting and filtering
+       
     }
 }

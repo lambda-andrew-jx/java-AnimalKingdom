@@ -29,7 +29,7 @@ public class Mammal extends Animal
     }
 
     @Override
-    public String tosString()
+    public String toString()
     {
         return "Mammal{" + "id:'" + id +'\'' + ", name:" + name + ", year named:" + yearDiscovered + "}";
     }

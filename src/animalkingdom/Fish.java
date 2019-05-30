@@ -29,7 +29,7 @@ public class Fish extends Animal
     }
 
     @Override
-    public String tosString()
+    public String toString()
     {
         return "Fish{" + "id:'" + id +'\'' + ", name:" + name + ", year named:" + yearDiscovered + "}";
     }
