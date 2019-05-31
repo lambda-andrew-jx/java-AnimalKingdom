@@ -5,6 +5,18 @@ import java.util.List;
 
 public class Main
 {
+    public static void printAnimals(ArrayList<Animals> animal, CheckAnimals tester)
+    {
+        for (Animals a : animal)
+        {
+            if (tester.test(a))
+            {
+                System.out.println(a.toString());
+            }
+        }
+    }
+
+
     public static void main(String[] args)
     {
         Mammals panda = new Mammals("Panda", 1869);
@@ -58,23 +70,37 @@ public class Main
 
           animalsList.sort((a1, a2) -> a1.getYear() - a2.getYear());
           animalsList.forEach((a) -> System.out.println(a.getYear()));
+          System.out.println();
 
         System.out.println("*** Alphabetically ***");
          animalsList.sort((a1, a2) -> a1.getName().compareTo(a2.getName()));
          animalsList.forEach((a) -> System.out.println(a.getName()));
+         System.out.println();
 
          System.out.println("*** Movement ***");
          animalsList.sort((a1, a2) -> a1.move().compareTo(a2.move()));
          animalsList.forEach((a) -> System.out.println(a.move()));
+         System.out.println();
 
          System.out.println("*** Breath with lungs ***");
 
-         
-         animalsList.sort((a1, a2) -> a1.breath().compareTo(a2.breath()));
-         animalsList.forEach((a) -> System.out.println(a.breath()));
+         printAnimals(animalsList, a -> a.breath() == "lungs");
+         System.out.println();         
 
+         System.out.println("*** Breath with lungs and named in 1758 ***");
+         printAnimals(animalsList, a -> (a.breath() == "lungs") && (a.getYear() == 1758));
+         System.out.println();
 
+         System.out.println("*** Breath with lungs and lay eggs ***");
+         printAnimals(animalsList, a -> (a.breath() == "lungs") && (a.reproduce() == "eggs"));
+         System.out.println();
 
+         System.out.println("*** Were named in 1758 ***");
+         printAnimals(animalsList, a -> a.getYear() == 1758);
+         System.out.println();
 
+         System.out.println("*** Mammals alphabetically ***");
+         mammalsList.sort((a1, a2) -> a1.getName().compareTo(a2.getName()));
+         mammalsList.forEach((a) -> System.out.println(a.getName()));
     }
 }

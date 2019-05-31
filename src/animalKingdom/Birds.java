@@ -20,7 +20,7 @@ public class Birds extends Animals
 
     public String breath()
     {
-        return "Lungs";
+        return "lungs";
     }
 
     public String reproduce()
