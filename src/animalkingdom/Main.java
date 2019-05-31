@@ -11,6 +11,14 @@ public class Main {
             }
         }
     }
+    // public static void FilterAnimalsByType(ArrayList<AbstractAnimals> animals, FilterAnimals boolValue){
+    //     for(AbstractAnimals animal : animals)
+    //     {
+    //         if(boolValue.test(animal)){
+    //             System.out.println(animal.getName());
+    //         }
+    //     }
+    // }
     public static void main(String[] args) {
 
         // Name: Panda Year Named: 1869
@@ -84,5 +92,9 @@ public class Main {
 
         System.out.println("*** List only those animals that lay eggs and breath with lungs ***\n");
         FilterAnimals(myList, (a)-> a.reproduce()=="eggs" && a.breath()=="lungs");
+
+        System.out.println("*** List alphabetically all the Mammals***");
+        myList.sort((a1,a2)-> a1.getName().compareToIgnoreCase(a2.getName()));
+        FilterAnimals(myList, (a)->a instanceof Mammals);
     }
 }
