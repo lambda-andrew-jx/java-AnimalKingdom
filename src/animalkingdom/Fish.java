@@ -7,7 +7,14 @@ public class Fish extends AbstractAnimals {
     }
 
     @Override
-    public String move(String moveMethod) {
-        return "swimms by " + moveMethod;
+    public String move() {
+        return "fins";
     }
+    @Override public String breath(){
+        return "gills";
+    }
+    @Override public String reproduce(){
+        return "eggs";
+    }
+
 }

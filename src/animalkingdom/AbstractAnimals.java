@@ -4,6 +4,8 @@ public abstract class AbstractAnimals {
     protected int hunger;
     protected String name;
     protected int year;
+    
+
     public AbstractAnimals(int hunger, String name, int year) {
         this.hunger = hunger;
         this.name = name;
@@ -22,8 +24,12 @@ public abstract class AbstractAnimals {
         return hunger;
     }
 
-    public abstract breath();
-    public abstract String move(String move);
+    public int getYear(){
+        return year;
+    }
+    public abstract String breath();
+    public abstract String move();
+    public abstract String reproduce();
     // public void breath(String getOxygen) {
     //     System.out.println(getOxygen);
     // }

@@ -7,8 +7,14 @@ public class Birds extends AbstractAnimals  {
     }
     
     @Override
-    public String move(String moveMethod) {
-        return "flies with " + moveMethod;
+    public String move() {
+        return "flying";
+    }
+    @Override public String breath(){
+        return "lungs";
+    }
+    @Override public String reproduce(){
+        return "eggs";
     }
 
 }

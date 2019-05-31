@@ -6,7 +6,14 @@ public class Mammals extends AbstractAnimals {
     }
 
     @Override
-    public String move(String moveMethod) {
-        return "moves by " + moveMethod;
+    public String move() {
+        return "legs";
     }
+    @Override public String breath(){
+        return "lungs";
+    }
+    @Override public String reproduce(){
+        return "birth";
+    }
+
 }
