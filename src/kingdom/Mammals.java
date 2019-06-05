@@ -5,9 +5,6 @@ public class Mammals extends Animal
 	private static int maxId = 20;
 	private int id;
 
-	public String name;
-	public int discovered;
-
 	public Mammals(String name, int discovered)
 	{
 		maxId++;

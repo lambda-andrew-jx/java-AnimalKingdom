@@ -10,7 +10,7 @@ public class Main
         {
             if(tester.test(a))
             {
-                System.out.println(a.toString());
+                System.out.println(a);
             };
         };
     }
@@ -60,6 +60,6 @@ public class Main
 		System.out.println("List all the animals in descending order by year named");
 		allAnimals.sort((o1, o2) -> o1.getYear() - o2.getYear());
 		// printAnimals(allAnimals, a -> true);
-		allAnimals.forEach(a -> System.out.println(a.getName()));
+		allAnimals.forEach(a -> System.out.println(a.toString()));
 	}
 }

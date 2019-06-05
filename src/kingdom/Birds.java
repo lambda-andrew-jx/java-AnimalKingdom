@@ -5,9 +5,6 @@ public class Birds extends Animal
 	private static int maxId = 0;
 	private int id;
 
-	public String name;
-	public int discovered;
-
 	public Birds(String name, int discovered)
 	{
 		maxId++;

@@ -5,9 +5,6 @@ public class Fish extends Animal
 	private static int maxId = 10;
 	private int id;
 
-	public String name;
-	public int discovered;
-
 	public Fish(String name, int discovered)
 	{
 		maxId++;
