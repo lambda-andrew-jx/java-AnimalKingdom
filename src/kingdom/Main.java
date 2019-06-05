@@ -58,7 +58,8 @@ public class Main
 		allAnimals.add(perch);
 
 		System.out.println("List all the animals in descending order by year named");
-		// allAnimals.sort((o1, o2) -> o1.getYear() - o2.getYear());
+		allAnimals.sort((o1, o2) -> o1.getYear() - o2.getYear());
 		// printAnimals(allAnimals, a -> true);
+		allAnimals.forEach(a -> System.out.println(a.getName()));
 	}
 }
