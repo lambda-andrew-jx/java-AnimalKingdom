@@ -4,6 +4,16 @@ import java.util.ArrayList;
 
 public class Main 
 {
+    public static void printAnimals(ArrayList<AnimalAbstract> animals, CheckAnimal tester)
+    {
+        for (AnimalAbstract animal : animals)
+        {
+            if (tester.test(animal))
+            {
+                System.out.println(animal);
+            }
+        }
+    }
     public static void main(String[] args)
     {
         Mammal Panda = new Mammal("Panda", 1869);
