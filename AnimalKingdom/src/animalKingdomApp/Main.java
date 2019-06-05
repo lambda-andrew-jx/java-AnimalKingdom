@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main 
 {
-    public static void printAnimals(ArrayList<AnimalAbstract> animals, CheckAnimal tester)
+    public static void printAnimals(ArrayList<AnimalAbstract> animalsList, CheckAnimal tester)
     {
         for (AnimalAbstract animal : animals)
         {
@@ -16,6 +16,7 @@ public class Main
     }
     public static void main(String[] args)
     {
+        //Calling Classes to Make New Animals
         Mammal Panda = new Mammal("Panda", 1869);
         Mammal Zebra = new Mammal("Zebra", 1778);
         Mammal Koala = new Mammal("Koala", 1816);
@@ -34,6 +35,8 @@ public class Main
         Fish Catfish = new Fish("Catfish", 1817);
         Fish Perch = new Fish("Perch", 1758);
 
+        //Array List
+
         ArrayList<AnimalAbstract> animals = new ArrayList<AnimalAbstract>();
         animals.add(Panda);
         animals.add(Zebra);
@@ -51,5 +54,47 @@ public class Main
         animals.add(Catfish);
         animals.add(Perch);
 
+
+        //Lambda Expressions
+        System.out.println("*** All the Animals ***");
+        printAnimals(animals, animal -> true);
+
+        System.out.println();
+
+        System.out.println("*** By Year Named ***");
+        animals.sort((animal1, animal2) -> animal2.getDiscovered() - animal1.getDiscovered());
+        printAnimals(animals, animal -> true);
+
+        System.out.println();
+
+        System.out.println("*** By Name ***");
+        animals.sort((animal1, animal2) -> animal1.getName().compareToIgnoreCase(animal2.getName()));
+        printAnimals(animals, animal -> true);
+
+        System.out.println();
+
+        System.out.println("*** By Movement ***");
+        animals.sort((animal1, animal2) -> animal1.getMovement().compareToIgnoreCase(animal2.getMovement()));
+        printAnimals(animals, animal -> true);
+
+        System.out.println();
+
+        System.out.println("*** With Lungs ***");
+        printAnimals(animals, animal -> (animal.getBreath() == "lungs"));
+
+        System.out.println();
+
+        System.out.println("*** With Lungs and Named in 1758 ***");
+        printAnimals(animals, animal -> (animal.getBreath() == "lungs") && (animal.getDiscovered() == 1758));
+
+        System.out.println();
+
+        System.out.println("*** With Lungs and Lays Eggs ***");
+        printAnimals(animals, animal -> (animal.getBreath() == "lungs") && (animal.getReproduction() == "eggs"));
+
+        System.out.println();
+
+        System.out.println("*** Named in 1758 ***");
+        printAnimals(animals, animal -> (animal.getDiscovered() == 1758));
     }
 }
