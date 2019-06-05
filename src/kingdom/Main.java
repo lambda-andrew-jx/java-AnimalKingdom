@@ -6,10 +6,13 @@ public class Main
 {
 	public static void printAnimals(ArrayList<Animal> animal, CheckAnimals tester)
     {
+    								// pass in an ArrayList of "Animal" type, pass in tester of CheckAnimal type(class)
         for (Animal a : animal)
         {
+
             if(tester.test(a))
             {
+            	// if it passes the test, then it moves to be printed
                 System.out.println(a.toString());
             };
         };
