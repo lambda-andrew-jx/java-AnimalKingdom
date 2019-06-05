@@ -85,9 +85,9 @@ public class Main {
         animals.stream().filter(animal -> animal.getYear() == 1758).forEach(animal -> System.out.println(animal.getName()));
 
         //Stretch Goal     /For the list of animals, list alphabetically those animals that are mammals.
-//        System.out.println("------------Stretch Goal---------------");
-//        animals.sort((a1,a2)-> a1.getName().compareToIgnoreCase(a2.getName()));
-//        animals.stream().filter(animal-> animal.getName()=="Mammals").forEach(animal-> System.out.println(animal.getName()));
+        System.out.println("------------Stretch Goal---------------");
+        animals.sort((a1,a2)-> a1.getName().compareToIgnoreCase(a2.getName()));
+        animals.stream().filter(animal-> animal.getClass().getName()=="Mammals").forEach(animal-> System.out.println(animal.getName()));
 
 
     }
