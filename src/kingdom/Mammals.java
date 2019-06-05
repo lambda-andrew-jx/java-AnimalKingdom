@@ -2,9 +2,11 @@ package kingdom;
 
 public class Mammals extends Animal
 {
+	// Fields
 	private static int maxId = 20;
 	private int id;
 
+// Constructor
 	public Mammals(String name, int discovered)
 	{
 		maxId++;
@@ -14,11 +16,13 @@ public class Mammals extends Animal
 		this.discovered = discovered;
 	}
 
+// ID Getter
 	public int getId()
 	{
 		return id;
 	}
 
+// Setting abstract methods
 	public String move()
 	{
 		return "legs";
@@ -34,6 +38,7 @@ public class Mammals extends Animal
 		return "birth";
 	}
 
+// Overriding toString to this instead of pointer
 	@Override
     public String toString()
     {
