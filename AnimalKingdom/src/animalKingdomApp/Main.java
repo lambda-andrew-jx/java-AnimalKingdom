@@ -96,5 +96,12 @@ public class Main
 
         System.out.println("*** Named in 1758 ***");
         printAnimals(animals, animal -> (animal.getDiscovered() == 1758));
+
+
+        System.out.println();
+
+        System.out.println("*** Mammals Listed Alphabetically ***");
+        animals.sort((animal1, animal2) -> animal1.getName().compareToIgnoreCase(animal2.getName()));
+        printAnimals(animals, animal -> (animal instanceof Mammal));
     }
 }
