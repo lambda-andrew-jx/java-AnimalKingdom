@@ -10,7 +10,7 @@ public class Main
         {
             if(tester.test(a))
             {
-                System.out.println(a);
+                System.out.println(a.toString());
             };
         };
     }
@@ -57,9 +57,65 @@ public class Main
 		allAnimals.add(catfish);
 		allAnimals.add(perch);
 
-		System.out.println("List all the animals in descending order by year named");
-		allAnimals.sort((o1, o2) -> o1.getYear() - o2.getYear());
-		// printAnimals(allAnimals, a -> true);
+		System.out.println("List all the animals in descending order by year named\n");
+		allAnimals.sort((o1, o2) -> o2.getYear() - o1.getYear());
 		allAnimals.forEach(a -> System.out.println(a.toString()));
+		System.out.println();
+
+		System.out.println("List all the animals alphabetically\n");
+		allAnimals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+		allAnimals.forEach(a -> System.out.println(a.toString()));
+		System.out.println();
+
+		System.out.println("List all the animals order by how they move\n");
+		allAnimals.sort((o1, o2) -> o1.move().compareToIgnoreCase(o2.move()));
+		allAnimals.forEach(a -> System.out.println(a.toString()));
+		System.out.println();
+
+		System.out.println("List only those animals the breath with lungs\n");
+		printAnimals(allAnimals, a -> (a.breathe() == "lungs"));
+		System.out.println();
+
+		System.out.println("List only those animals that breath with lungs and were named in 1758\n");
+		printAnimals(allAnimals, a -> (a.breathe() == "lungs") && (a.getYear() == 1758));
+		System.out.println();
+
+		System.out.println("List only those animals that lay eggs and breath with lungs\n");
+		printAnimals(allAnimals, a -> (a.reproduce() == "eggs") && (a.breathe() == "lungs"));
+		System.out.println();
+
+		System.out.println("List alphabetically only those animals that were named in 1758\n");
+		allAnimals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+		printAnimals(allAnimals, a -> a.getYear() == 1758);
+		System.out.println();
+
+		// Stretch
+
+		System.out.println("For the list of animals, list alphabetically those animals that are mammals");
+		allAnimals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+		printAnimals(allAnimals, a -> (a instanceof Mammals));
+		System.out.println();
+
+
 	}
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
