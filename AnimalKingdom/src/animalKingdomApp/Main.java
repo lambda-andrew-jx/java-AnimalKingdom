@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Main 
 {
-    public static void printAnimals(ArrayList<AnimalAbstract> animalsList, CheckAnimal tester)
+    public static void printAnimals(ArrayList<AbstractAnimal> animalsList, CheckAnimal tester)
     {
-        for (AnimalAbstract animal : animals)
+        for (AbstractAnimal animal : animalsList)
         {
             if (tester.test(animal))
             {
@@ -37,7 +37,7 @@ public class Main
 
         //Array List
 
-        ArrayList<AnimalAbstract> animals = new ArrayList<AnimalAbstract>();
+        ArrayList<AbstractAnimal> animals = new ArrayList<AbstractAnimal>();
         animals.add(Panda);
         animals.add(Zebra);
         animals.add(Koala);
@@ -80,17 +80,17 @@ public class Main
         System.out.println();
 
         System.out.println("*** With Lungs ***");
-        printAnimals(animals, animal -> (animal.getBreath() == "lungs"));
+        printAnimals(animals, animal -> (animal.getBreathe() == "lungs"));
 
         System.out.println();
 
         System.out.println("*** With Lungs and Named in 1758 ***");
-        printAnimals(animals, animal -> (animal.getBreath() == "lungs") && (animal.getDiscovered() == 1758));
+        printAnimals(animals, animal -> (animal.getBreathe() == "lungs") && (animal.getDiscovered() == 1758));
 
         System.out.println();
 
         System.out.println("*** With Lungs and Lays Eggs ***");
-        printAnimals(animals, animal -> (animal.getBreath() == "lungs") && (animal.getReproduction() == "eggs"));
+        printAnimals(animals, animal -> (animal.getBreathe() == "lungs") && (animal.getReproduction() == "eggs"));
 
         System.out.println();
 

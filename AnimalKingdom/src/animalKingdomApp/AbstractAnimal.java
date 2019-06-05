@@ -54,7 +54,7 @@ public abstract class AbstractAnimal
     }
 
     public void setBreathe(String breathe) {
-        this.breath = breathe;
+        this.breathe = breathe;
     }
 
     public String getMovement() {
@@ -99,7 +99,7 @@ public abstract class AbstractAnimal
         return "The " + this.name + " was discovered in " + 
                 this.discovered + ". It moves by " +
                 this.movement + ", breathes with " +
-                this.breath + ", and reproduces via " +
+                this.breathe + ", and reproduces via " +
                 this.reproduction + ".";
     }
 }
