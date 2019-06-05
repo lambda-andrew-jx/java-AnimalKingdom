@@ -22,29 +22,19 @@ public class Mammals extends Animal
 		return id;
 	}
 
-	public String getName()
-	{
-		return this.name;
-	}
-
-	public int getYear()
-	{
-		return discovered;
-	}
-
 	public String move()
 	{
-		return "I walk with legs";
+		return "legs";
 	}
 
 	public String breathe()
 	{
-		return "I breathe with my lungs";
+		return "lungs";
 	}
 
 	public String reproduce()
 	{
-		return "I give live birth";
+		return "birth";
 	}
 
 	@Override
@@ -52,6 +42,6 @@ public class Mammals extends Animal
     {
         return "Mammal {" +
                 "name='" + name + '\''
-                + '}';
+                + discovered + " " +'}';
     }
 }

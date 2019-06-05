@@ -22,28 +22,19 @@ public class Fish extends Animal
 		return id;
 	}
 
-	public String getName()
-	{
-		return name;
-	}
-	public int getYear()
-	{
-		return discovered;
-	}
-
 	public String move()
 	{
-		return "I swim with my fins";
+		return "fins";
 	}
 
 	public String breathe()
 	{
-		return "I breathe with my gills";
+		return "gills";
 	}
 
 	public String reproduce()
 	{
-		return "I give birth through eggs";
+		return "eggs";
 	}
 
 	@Override
@@ -51,6 +42,6 @@ public class Fish extends Animal
     {
         return "Fish {" +
                 "name='" + name + '\''
-                + '}';
+                + discovered + " " +'}';
     }
 }

@@ -1,6 +1,6 @@
 package kingdom;
 
-public interface CheckAnimal
+public interface CheckAnimals
 {
-    boolean test(AnimalAbstract a);
+    boolean test(Animal a);
 }

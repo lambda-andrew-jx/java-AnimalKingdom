@@ -4,6 +4,17 @@ import java.util.*;
 
 public class Main
 {
+	public static void printAnimals(ArrayList<Animal> animal, CheckAnimals tester)
+    {
+        for (Animal a : animal)
+        {
+            if(tester.test(a))
+            {
+                System.out.println(a.toString());
+            };
+        };
+    }
+
 	public static void main(String[] args)
 	{
 // Intialize all animals
@@ -46,10 +57,8 @@ public class Main
 		allAnimals.add(catfish);
 		allAnimals.add(perch);
 
-// Checking status of arraylist
-
-		allAnimals.forEach(a -> System.out.println(a));
-
-	
+		System.out.println("List all the animals in descending order by year named");
+		// allAnimals.sort((o1, o2) -> o1.getYear() - o2.getYear());
+		// printAnimals(allAnimals, a -> true);
 	}
 }

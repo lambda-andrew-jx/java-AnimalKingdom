@@ -22,29 +22,19 @@ public class Birds extends Animal
 		return id;
 	}
 
-	public String getName()
-	{
-		return this.name;
-	}
-
-	public int getYear()
-	{
-		return discovered;
-	}
-
 	public String move()
 	{
-		return "I fly with my wings";
+		return "wings";
 	}
 
 	public String breathe()
 	{
-		return "I breathe with my lungs";
+		return "lungs";
 	}
 
 	public String reproduce()
 	{
-		return "I give birth through eggs";
+		return "eggs";
 	}
 
 	@Override
@@ -52,6 +42,6 @@ public class Birds extends Animal
     {
         return "Bird {" +
                 "name='" + name + '\''
-                + '}';
+                + discovered + " " + '}';
     }
 }
