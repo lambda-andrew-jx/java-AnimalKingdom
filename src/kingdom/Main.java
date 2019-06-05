@@ -57,33 +57,40 @@ public class Main
 		allAnimals.add(catfish);
 		allAnimals.add(perch);
 
+		// #1
 		System.out.println("List all the animals in descending order by year named\n");
 		allAnimals.sort((o1, o2) -> o2.getYear() - o1.getYear());
 		allAnimals.forEach(a -> System.out.println(a.toString()));
 		System.out.println();
 
+		// #2 	
 		System.out.println("List all the animals alphabetically\n");
 		allAnimals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
 		allAnimals.forEach(a -> System.out.println(a.toString()));
 		System.out.println();
 
+		// #3
 		System.out.println("List all the animals order by how they move\n");
 		allAnimals.sort((o1, o2) -> o1.move().compareToIgnoreCase(o2.move()));
 		allAnimals.forEach(a -> System.out.println(a.toString()));
 		System.out.println();
 
+		// #4
 		System.out.println("List only those animals the breath with lungs\n");
 		printAnimals(allAnimals, a -> (a.breathe() == "lungs"));
 		System.out.println();
 
+		// #5
 		System.out.println("List only those animals that breath with lungs and were named in 1758\n");
 		printAnimals(allAnimals, a -> (a.breathe() == "lungs") && (a.getYear() == 1758));
 		System.out.println();
 
+		// #6
 		System.out.println("List only those animals that lay eggs and breath with lungs\n");
 		printAnimals(allAnimals, a -> (a.reproduce() == "eggs") && (a.breathe() == "lungs"));
 		System.out.println();
 
+		// #7
 		System.out.println("List alphabetically only those animals that were named in 1758\n");
 		allAnimals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
 		printAnimals(allAnimals, a -> a.getYear() == 1758);
