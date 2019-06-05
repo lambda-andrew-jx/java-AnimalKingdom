@@ -43,10 +43,10 @@ public class Main {
 		animals.add(perch);
 
 		// By year named
-		animals.sort( (a1, a2) -> a1.getYearDiscovered() - a2.getYearDiscovered() );
+		animals.sort( (a1, a2) -> a1.getyearNamed() - a2.getyearNamed() );
 
 		System.out.println("\n***Year Named***");
-    animals.forEach((a) -> System.out.println(a.getYearDiscovered()));
+    animals.forEach((a) -> System.out.println(a.getyearNamed()));
 
     // Alphabetically
     animals.sort( (a1, a2) -> a1.getName().compareTo(a2.getName()) );
@@ -60,4 +60,5 @@ public class Main {
 		System.out.println("\n***Movement***");
     animals.forEach((a) -> System.out.println(a.move()));
 
+}
 }

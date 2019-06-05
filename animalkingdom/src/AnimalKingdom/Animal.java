@@ -6,12 +6,12 @@ public abstract class Animal {
 
 	protected int id;
 	protected String name;
-	protected int yearDiscovered;
+	protected int yearNamed;
 
-	public Animal(String name, int yearDiscovered) {
+	public Animal(String name, int yearNamed) {
 		this.id = maxId++;
 		this.name = name;
-		this.yearDiscovered = yearDiscovered;
+		this.yearNamed = yearNamed;
 	}
 
 	public abstract String move();
@@ -23,5 +23,5 @@ public abstract class Animal {
 	}
 
 	public String getName() { return name; }
-    public int getYearDiscovered() { return yearDiscovered; }
+    public int getyearNamed() { return yearNamed; }
 }
